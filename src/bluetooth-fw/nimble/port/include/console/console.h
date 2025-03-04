@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#ifndef __CONSOLE_H__
+#define __CONSOLE_H__
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+#include "system/logging.h"
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+#define console_printf(_fmt, ...) PBL_LOG_D(LOG_DOMAIN_BT, LOG_LEVEL_INFO, _fmt, ##__VA_ARGS__)
+
+#endif /* __CONSOLE_H__ */

@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include <bluetooth/gatt.h>
+#include <inttypes.h>
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+void bt_driver_gatt_respond_read_subscription(uint32_t transaction_id, uint16_t response_code) {}
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+void bt_driver_gatt_send_changed_indication(uint32_t connection_id, const ATTHandleRange *data) {}

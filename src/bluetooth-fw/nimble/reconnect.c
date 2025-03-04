@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,19 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
+#include <stdbool.h>
 #include <stdint.h>
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+void bt_driver_reconnect_pause(void) {}
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+void bt_driver_reconnect_resume(void) {}
+
+void reconnect_set_interval(uint16_t new_interval) {}
+
+void bt_driver_reconnect_try_now(bool ignore_paused) {}
+
+void bt_driver_reconnect_reset_interval(void) {}
+
+void bt_driver_reconnect_notify_platform_bitfield(uint32_t platform_bitfield) {
+  // Don't care
+}

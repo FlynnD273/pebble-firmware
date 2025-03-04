@@ -7,3 +7,9 @@
 [submodule "src/fw/vendor/stm32-sdk"]
 	path = src/fw/vendor/stm32-sdk
 	url = https://github.com/pebble-dev/stm32-sdk.git
+[submodule "src/bluetooth-fw/nimble/vendor/mynewt-nimble"]
+	path = src/bluetooth-fw/nimble/vendor/mynewt-nimble
+	url = https://github.com/apache/mynewt-nimble.git
+[submodule "src/bluetooth-fw/nimble/vendor/ti-service-packs"]
+	path = src/bluetooth-fw/nimble/vendor/ti-service-packs
+	url = https://git.ti.com/git/ti-bt/service-packs.git

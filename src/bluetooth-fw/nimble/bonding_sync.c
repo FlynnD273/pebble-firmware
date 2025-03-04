@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include <bluetooth/bonding_sync.h>
+#include <bluetooth/sm_types.h>
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+void bt_driver_handle_host_added_bonding(const BleBonding *bonding) {}
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+void bt_driver_handle_host_removed_bonding(const BleBonding *bonding) {}

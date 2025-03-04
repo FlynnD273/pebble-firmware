@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include "bluetooth/gap_le_scan.h"
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+bool bt_driver_start_le_scan(bool active_scan, bool use_white_list_filter, bool filter_dups,
+                             uint16_t scan_interval_ms, uint16_t scan_window_ms) {
+  return true;
+}
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+bool bt_driver_stop_le_scan(void) { return true; }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,6 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include "bluetooth/gap_le_connect.h"
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
-
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+int bt_driver_gap_le_disconnect(const BTDeviceInternal *peer_address) { return 0; }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,14 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include <bluetooth/classic_connect.h>
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+void bt_driver_classic_disconnect(const BTDeviceAddress* address) {}
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+bool bt_driver_classic_is_connected(void) { return false; }
+
+bool bt_driver_classic_copy_connected_address(BTDeviceAddress* address) { return false; }
+
+bool bt_driver_classic_copy_connected_device_name(char nm[BT_DEVICE_NAME_BUFFER_SIZE]) {
+  return false;
+}

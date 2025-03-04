@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include <bluetooth/pebble_pairing_service.h>
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+void bt_driver_pebble_pairing_service_handle_status_change(const GAPLEConnection *connection) {}
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+void bt_driver_pebble_pairing_service_handle_gatt_mtu_change(const GAPLEConnection *connection) {}

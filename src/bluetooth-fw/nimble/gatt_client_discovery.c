@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,18 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include <bluetooth/bluetooth_types.h>
+#include <bluetooth/gatt.h>
+#include <inttypes.h>
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+// -------------------------------------------------------------------------------------------------
+// Gatt Client Discovery API calls
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+BTErrno bt_driver_gatt_start_discovery_range(const GAPLEConnection *connection,
+                                             const ATTHandleRange *data) {
+  return 0;
+}
+
+BTErrno bt_driver_gatt_stop_discovery(GAPLEConnection *connection) { return 0; }
+
+void bt_driver_gatt_handle_discovery_abandoned(void) {}

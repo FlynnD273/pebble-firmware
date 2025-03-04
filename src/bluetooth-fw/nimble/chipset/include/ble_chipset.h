@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#ifndef _BLE_CHIPSET_H_
+#define _BLE_CHIPSET_H_
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+void ble_chipset_init(void);
+bool ble_chipset_start(void);
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+#endif  // _BLE_CHIPSET_H_

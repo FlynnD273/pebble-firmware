@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,13 @@
  * limitations under the License.
  */
 
-#include <stddef.h>
-#include <stdint.h>
+#include "bluetooth/responsiveness.h"
 
-typedef struct GAPLEAdvertisingJobTerm GAPLEAdvertisingJobTerm;
+#include <inttypes.h>
 
-const GAPLEAdvertisingJobTerm *bt_driver_adv_reconnect_get_job_terms(size_t *num_terms_out);
+#include "bluetooth/gap_le_connect.h"
+
+bool bt_driver_le_connection_parameter_update(const BTDeviceInternal *addr,
+                                              const BleConnectionParamsUpdateReq *req) {
+  return true;
+}
